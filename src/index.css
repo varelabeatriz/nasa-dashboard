@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+}
+
 img {
   width: 500px;
+}
+
+.App {
+  display: flex;
 }
