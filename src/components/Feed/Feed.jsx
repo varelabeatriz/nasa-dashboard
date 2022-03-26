@@ -15,12 +15,16 @@ export function Feed (){
         setImageUrl(image.data.hdurl);
     }
 
+    const onChange = (e) => {
+        setDate(e.target.value);
+    }
+
     return (
         <div>
             <p>Hello World</p>
 
             <label htmlFor="date"></label>
-            <input type="text" name='date'/>
+            <input type="text" name='date' onChange={onChange}/>
 
             <button onClick={()=> {getData()}}>Get Data</button>
 
