@@ -24,6 +24,8 @@ $ yarn start
 
 - [Create React App](https://github.com/facebook/create-react-app)
 - [NASA APOD API](https://github.com/nasa/apod-api)
+- [Rocket Launch API](https://www.rocketlaunch.live/api)
+- [People in Space API](http://open-notify.org/Open-Notify-API/People-In-Space/)
 - [Styled Components](https://styled-components.com/)
 
 ### 🚀 Points to improve
