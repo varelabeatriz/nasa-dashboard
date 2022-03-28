@@ -6,7 +6,6 @@ export function SideBar(){
     return (
         <SideBarContainer>
             <img src="nasa-logo.png" alt="" />
-            <h3>NasaDasboard</h3>
             <nav>
                 <button
                     onClick={()=> {
@@ -14,12 +13,15 @@ export function SideBar(){
                     }}
                  >Home
                 </button>
+                <button>Images</button>
+                <button>People in Space</button>
                 <button
                     onClick={()=> {
                         navigate("/about");
                     }}
                  > About
                 </button>
+                <button>Github</button>
             </nav>
         </SideBarContainer>
     )
