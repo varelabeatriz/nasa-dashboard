@@ -8,11 +8,14 @@ function App() {
   return (
     <div className="App">
       <SideBar></SideBar>
-      <Routes>
-        <Route path="/" element={<Feed />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      <div>
+        <h1>Title</h1>
+        <Routes>
+          <Route path="/" element={<Feed />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </div>
     </div>
   );
 }

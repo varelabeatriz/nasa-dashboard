@@ -4,22 +4,33 @@ export function Launches (){
 
     return (
         <LaunchesContainer>
-            <table>
-                <tr>
-                    <td>
-                        Blue Origin
-                    </td>
-                    <td>
-                        New Shepard
-                    </td>
-                    <td>
-                        Texas
-                    </td>
-                    <td>
-                        United States
-                    </td>
-                </tr>
-            </table>
+            <div className='table'>
+                    <div>
+                        <p> Blue Origin</p>
+                        <p>New Shepard</p>
+                        <p>Texas</p>
+                        <p>United States</p>
+                    </div>
+                    <div>
+                        <p> Blue Origin</p>
+                        <p>New Shepard</p>
+                        <p>Texas</p>
+                        <p>United States</p>
+                    </div>
+                    <div>
+                        <p> Blue Origin</p>
+                        <p>New Shepard</p>
+                        <p>Texas</p>
+                        <p>United States</p>
+                    </div>
+                    <div>
+                        <p> Blue Origin</p>
+                        <p>New Shepard</p>
+                        <p>Texas</p>
+                        <p>United States</p>
+                    </div>
+                 
+            </div>
         </LaunchesContainer>
     )
 }

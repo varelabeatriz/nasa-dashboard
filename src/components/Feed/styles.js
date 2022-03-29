@@ -36,5 +36,17 @@ export const FeedContainer = styled.div`
         }
     }
 
-   
+    .launches-title {
+        margin-top: 20px;
+    }
+
+    .astronomy-picture {
+        display: flex;
+
+        > div {
+            small {
+                color: #929292;
+            }
+        }
+    }
 `
