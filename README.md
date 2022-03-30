@@ -31,3 +31,5 @@ $ yarn start
 ### 🚀 Points to improve
 
 - Make it responsive
+- Add translations
+- Add dark mode
