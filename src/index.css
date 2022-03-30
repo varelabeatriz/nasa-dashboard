@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  overflow: hidden;
+
+}
+
 * {
   margin: 0;
   font-family: sans-serif;
@@ -9,4 +16,17 @@ img {
 
 .App {
   display: flex;
+}
+
+.App div h1 {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: #3171D0;
+  display: flex;
+  align-items: center;
+}
+
+.App div h1 img {
+  width: 100px;
 }

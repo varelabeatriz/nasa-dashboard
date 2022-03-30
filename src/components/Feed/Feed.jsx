@@ -25,8 +25,8 @@ export function Feed (){
                 </div>
 
                 <div className='info'>
-                    <p>7</p>
-                    <p>Asteroids approaching Earth</p>
+                    <p>11</p>
+                    <p>People in Space</p>
                 </div>
 
                 <div className='info'>

@@ -9,7 +9,10 @@ function App() {
     <div className="App">
       <SideBar></SideBar>
       <div>
-        <h1>Title</h1>
+        <h1>
+          <img src="nasa-logo.png" alt="" />
+          Dashboard
+        </h1>
         <Routes>
           <Route path="/" element={<Feed />} />
           <Route path="/about" element={<About />} />

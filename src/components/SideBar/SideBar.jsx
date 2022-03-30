@@ -5,23 +5,32 @@ export function SideBar(){
     let navigate = useNavigate();
     return (
         <SideBarContainer>
-            <img src="nasa-logo.png" alt="" />
             <nav>
                 <button
                     onClick={()=> {
                         navigate("/");
                     }}
-                 >Home
+                 >
+                    <img src='home.svg'></img>
+                    Home
                 </button>
-                <button>Images</button>
-                <button>People in Space</button>
+                <button>
+                    <img src='images.svg'></img>
+                    Images</button>
+                <button>
+                    <img src='rocket.svg'></img>
+                    People in Space</button>
                 <button
                     onClick={()=> {
                         navigate("/about");
                     }}
-                 > About
+                 >
+                    <img src='about.svg'></img>
+                    About
                 </button>
-                <button>Github</button>
+                <button>
+                    <img src='github.svg'></img>
+                    Github</button>
             </nav>
         </SideBarContainer>
     )

@@ -4,8 +4,9 @@ export const SideBarContainer = styled.div`
     margin: 10px;
     background-color: #4C8CED;
     width: 200px;
-    height: 100vh;
-    padding: 20px;
+    min-width: 200px;
+    height: 81vh;
+    padding: 120px 20px 20px;
     border-radius: 12px;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
 
@@ -27,6 +28,16 @@ export const SideBarContainer = styled.div`
             background-color: transparent;
             color: white;
             margin: 10px 0;
+            font-family: 600;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 16px;
+                margin-right: 10px;
+            }
         }
     }
 `;

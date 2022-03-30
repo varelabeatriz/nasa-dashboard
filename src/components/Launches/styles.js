@@ -12,7 +12,7 @@ export const LaunchesContainer = styled.div`
         > div {
             display: flex;
             justify-content: space-between;
-            padding: 20px;
+            padding: 15px;
 
             &:nth-child(2n) {
                 background-color: #e3e3e3;

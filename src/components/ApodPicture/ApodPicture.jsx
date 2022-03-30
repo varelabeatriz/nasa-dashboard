@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ApodPictureContainer } from './styles';
 
 export function ApodPicture(){
@@ -11,22 +11,22 @@ export function ApodPicture(){
 
     const getData = async () => {
         const result = await Axios.get(url);
-        setImage(result);
-        console.log(image);
-        setImageUrl(image.data.hdurl);
+        setImage(result.data);
     }
+
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <ApodPictureContainer>
-            <button onClick={()=> {getData()}}>Get Data</button>
-
             {image ? (
                 <div className='astronomy-picture'>
-                    <img src={imageUrl} alt="" />
+                    <img src={image.hdurl} alt="" />
                     <div>
-                        
+                        <h2>{image.title}</h2>
                         <small>Astronomy Picture of the Day</small>
-                        
+                        <p>{image.explanation}</p>
                     </div>
                 </div>
             ) : (

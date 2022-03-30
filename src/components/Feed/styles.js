@@ -6,7 +6,14 @@ export const FeedContainer = styled.div`
     margin: 10px;
     border-radius: 12px;
     padding: 20px;
-    width: 100%;
+    width: 95%;
+    height: 82vh;
+
+    h3 {
+        color: #696969;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+    }
 
     div.info-container {
         margin-top: 20px;
@@ -20,7 +27,7 @@ export const FeedContainer = styled.div`
             align-items: center;
             background-color: #4C8CED;
             padding: 20px;
-            height: 100px;
+            height: 80px;
             width: 150px;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
             border-radius: 14px;
@@ -38,15 +45,5 @@ export const FeedContainer = styled.div`
 
     .launches-title {
         margin-top: 20px;
-    }
-
-    .astronomy-picture {
-        display: flex;
-
-        > div {
-            small {
-                color: #929292;
-            }
-        }
     }
 `

@@ -6,4 +6,14 @@ export const ApodPictureContainer = styled.div `
         height: 300px;
         margin-right: 15px;
     }
+
+    .astronomy-picture {
+        display: flex;
+
+        > div {
+            small {
+                color: #929292;
+            }
+        }
+    }
 `
