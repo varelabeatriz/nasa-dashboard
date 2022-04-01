@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import React, { useState } from 'react';
 import { ApodPicture } from '../ApodPicture/ApodPicture';
+import { DoughnutChart } from '../DoughnutChart/DoughnutChart';
 import { Launches } from '../Launches/Launches';
 import { FeedContainer } from './styles';
 
@@ -18,30 +19,38 @@ export function Feed (){
         <FeedContainer>
             <h3>March 27, 2022</h3>
 
-            <div className='info-container'>
-                <div className='info'>
-                    <p>7</p>
-                    <p>Asteroids approaching Earth</p>
+            <div className='row'>
+                <div className='1-column'>
+                    <div className='info-container'>
+                        <div className='info'>
+                            <p>7</p>
+                            <p>Asteroids approaching Earth</p>
+                        </div>
+
+                        <div className='info'>
+                            <p>11</p>
+                            <p>People in Space</p>
+                        </div>
+
+                        <div className='info'>
+                            <p>7</p>
+                            <p>Asteroids approaching Earth</p>
+                        </div>
+
+                        <div className='info'>
+                            <p>7</p>
+                            <p>Asteroids approaching Earth</p>
+                        </div>
+                    </div>
+
+                    <h3 className='launches-title'>Next 5 launches</h3>
+                    <Launches></Launches>
                 </div>
 
-                <div className='info'>
-                    <p>11</p>
-                    <p>People in Space</p>
-                </div>
-
-                <div className='info'>
-                    <p>7</p>
-                    <p>Asteroids approaching Earth</p>
-                </div>
-
-                <div className='info'>
-                    <p>7</p>
-                    <p>Asteroids approaching Earth</p>
-                </div>
+                <DoughnutChart></DoughnutChart>
             </div>
 
-            <h3 className='launches-title'>Next 5 launches</h3>
-            <Launches></Launches>
+            
 
             <ApodPicture></ApodPicture>
 

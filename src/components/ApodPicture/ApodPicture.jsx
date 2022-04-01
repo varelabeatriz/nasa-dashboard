@@ -24,9 +24,10 @@ export function ApodPicture(){
                 <div className='astronomy-picture'>
                     <img src={image.hdurl} alt="" />
                     <div>
-                        <h2>{image.title}</h2>
+                        <h3>{image.title}</h3>
                         <small>Astronomy Picture of the Day</small>
                         <p>{image.explanation}</p>
+                        <button>See previous pictures</button>
                     </div>
                 </div>
             ) : (

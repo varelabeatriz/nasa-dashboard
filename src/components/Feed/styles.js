@@ -9,6 +9,14 @@ export const FeedContainer = styled.div`
     width: 95%;
     height: 82vh;
 
+    div.row {
+        display: flex;
+
+        div.column {
+            
+        }
+    }
+
     h3 {
         color: #696969;
         font-family: 'Inter', sans-serif;
