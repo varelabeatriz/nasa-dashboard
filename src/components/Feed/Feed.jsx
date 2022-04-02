@@ -22,13 +22,29 @@ export function Feed (){
         mm = "0"+mm;
     }
 
-    const startDate = yyyy + '-' + mm + '-' + dd;
+    let endDate = new Date();
+    endDate.setDate(today.getDate() + 7);
+    
+    let ddEnd = endDate.getDate(),
+    mmEnd = endDate.getMonth(),
+    yyyyEnd = endDate.getFullYear();
+
+    if (ddEnd.toString().length < 2){
+        ddEnd = "0"+ddEnd;
+    }
+
+    if (mmEnd.toString().length < 2){
+        mmEnd = "0"+mmEnd;
+    }
+
+    const startDate = yyyy + '-' + mm + '-' + dd,
+    endDateString = yyyyEnd + '-' + mmEnd + '-' + ddEnd;
 
     const [peopleInSpace, setPeopleInSpace ] = useState([]);
 
     const peopleInSpaceUrl = 'http://api.open-notify.org/astros.json';
 
-    const nearEarthObjects = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=$${startDate}}&api_key=n8y6D1t17guEP26zaoJpQRuIbkihNKIgFf1S3baD`;
+    const nearEarthObjects = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=$${endDateString}}&api_key=n8y6D1t17guEP26zaoJpQRuIbkihNKIgFf1S3baD`;
 
     const getData = async () => {
         const result = await Axios.get(peopleInSpaceUrl);
