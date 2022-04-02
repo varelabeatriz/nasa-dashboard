@@ -15,9 +15,17 @@ export function Feed (){
 
     const nextLaunchesUrl = 'https://fdo.rocketlaunch.live/json/launches/next/5'
 
+    const today = new Date();
+
+    function formatDate(date, format) {
+        //
+    }
+    
+    formatDate(today, 'mm/dd/yy');
+
     return (
         <FeedContainer>
-            <h3>March 27, 2022</h3>
+            <h3></h3>
 
             <div className='row'>
                 <div className='1-column'>
@@ -34,12 +42,7 @@ export function Feed (){
 
                         <div className='info'>
                             <p>7</p>
-                            <p>Asteroids approaching Earth</p>
-                        </div>
-
-                        <div className='info'>
-                            <p>7</p>
-                            <p>Asteroids approaching Earth</p>
+                            <p>Tripulated crafts</p>
                         </div>
                     </div>
 

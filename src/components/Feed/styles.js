@@ -36,7 +36,7 @@ export const FeedContainer = styled.div`
             background-color: #4C8CED;
             padding: 20px;
             height: 80px;
-            width: 150px;
+            width: 30%;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
             border-radius: 14px;
             color: white;
