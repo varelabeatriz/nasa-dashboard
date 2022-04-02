@@ -15,17 +15,14 @@ export function Feed (){
 
     const nextLaunchesUrl = 'https://fdo.rocketlaunch.live/json/launches/next/5'
 
-    const today = new Date();
-
-    function formatDate(date, format) {
-        //
-    }
-    
-    formatDate(today, 'mm/dd/yy');
+    const today = new Date(),
+    dd = today.getDate(), 
+    yyyy = today.getFullYear(),
+    month = today.toLocaleString('en-GB', { month: 'long' });
 
     return (
         <FeedContainer>
-            <h3></h3>
+            <h3>{month} {dd}, {yyyy}</h3>
 
             <div className='row'>
                 <div className='1-column'>
