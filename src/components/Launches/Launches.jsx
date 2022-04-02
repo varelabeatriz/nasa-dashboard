@@ -1,5 +1,7 @@
 import { LaunchesContainer } from './styles';
 
+const nextLaunchesUrl = 'https://fdo.rocketlaunch.live/json/launches/next/5';
+
 export function Launches (){
 
     return (

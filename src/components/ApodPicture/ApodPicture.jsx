@@ -5,9 +5,8 @@ import { ApodPictureContainer } from './styles';
 export function ApodPicture(){
 
     const [image, setImage ] = useState([]);
-    const [imageUrl, setImageUrl ] = useState('');
 
-    const url = `https://api.nasa.gov/planetary/apod?api_key=n8y6D1t17guEP26zaoJpQRuIbkihNKIgFf1S3baD`
+    const url = `https://api.nasa.gov/planetary/apod?api_key=n8y6D1t17guEP26zaoJpQRuIbkihNKIgFf1S3baD`;
 
     const getData = async () => {
         const result = await Axios.get(url);
@@ -31,7 +30,7 @@ export function ApodPicture(){
                     </div>
                 </div>
             ) : (
-                <p>No image</p>
+                <p>Couldn't get image</p>
             )}
         </ApodPictureContainer>
     )

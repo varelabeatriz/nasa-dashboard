@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ApodPicture } from '../ApodPicture/ApodPicture';
 import { DoughnutChart } from '../DoughnutChart/DoughnutChart';
 import { Launches } from '../Launches/Launches';
@@ -7,18 +7,37 @@ import { FeedContainer } from './styles';
 
 export function Feed (){
 
-    const [asteroidsData, setAsteroidsData] = useState([]);
-
-    const asteroidsUrl = `https://ssd-api.jpl.nasa.gov/cad.api?des=433&date-min=2022-03-24&date-max=2100-01-01&dist-max=0.2`
-
-    const peopleInSpaceUrl = 'http://api.open-notify.org/astros.json'
-
-    const nextLaunchesUrl = 'https://fdo.rocketlaunch.live/json/launches/next/5'
-
-    const today = new Date(),
-    dd = today.getDate(), 
+    const today = new Date(), 
     yyyy = today.getFullYear(),
     month = today.toLocaleString('en-GB', { month: 'long' });
+
+    var dd = today.getDate(),
+    mm = today.getMonth();
+
+    if (dd.toString().length < 2){
+        dd = "0"+dd;
+    }
+
+    if (mm.toString().length < 2){
+        mm = "0"+mm;
+    }
+
+    const startDate = yyyy + '-' + mm + '-' + dd;
+
+    const [peopleInSpace, setPeopleInSpace ] = useState([]);
+
+    const peopleInSpaceUrl = 'http://api.open-notify.org/astros.json';
+
+    const nearEarthObjects = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=$${startDate}}&api_key=n8y6D1t17guEP26zaoJpQRuIbkihNKIgFf1S3baD`;
+
+    const getData = async () => {
+        const result = await Axios.get(peopleInSpaceUrl);
+        setPeopleInSpace(result.data);
+    }
+
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <FeedContainer>
@@ -33,7 +52,7 @@ export function Feed (){
                         </div>
 
                         <div className='info'>
-                            <p>11</p>
+                            <p>{peopleInSpace.number}</p>
                             <p>People in Space</p>
                         </div>
 
@@ -49,8 +68,6 @@ export function Feed (){
 
                 <DoughnutChart></DoughnutChart>
             </div>
-
-            
 
             <ApodPicture></ApodPicture>
 
