@@ -31,7 +31,6 @@ export function Launches (){
                         <p>Texas</p>
                         <p>United States</p>
                     </div>
-                 
             </div>
         </LaunchesContainer>
     )
