@@ -13,7 +13,7 @@ export const FeedContainer = styled.div`
         display: flex;
 
         div.column {
-            
+            width: 70%;
         }
     }
 

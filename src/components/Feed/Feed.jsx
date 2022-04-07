@@ -47,7 +47,7 @@ export function Feed (){
         <FeedContainer>
             <h3>{month} {dd}, {yyyy}</h3>
             <div className='row'>
-                <div className='1-column'>
+                <div className='column'>
                     <InfoBlocks></InfoBlocks>
                     <h3 className='launches-title'>Next 5 launches</h3>
                     <Launches></Launches>
