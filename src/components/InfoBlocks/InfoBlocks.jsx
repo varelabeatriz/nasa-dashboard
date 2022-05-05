@@ -5,13 +5,22 @@ export function InfoBlocks (){
 
     const { peopleInSpace, getData } = usePeopleInSpace();
 
-    console.log(peopleInSpace);
-
     useEffect(() => {
         getData();
     }, []);
 
+    let craftArr = [];
+
+    for(let i=0; i<peopleInSpace.number; i++){
+        craftArr.push(peopleInSpace.people[i].craft);
+
+        craftArr = craftArr.filter(function (value, index, array) { 
+            return array.indexOf(value) === index;
+        });
+    }
+
     return (
+
         <div className='info-container'>
             <div className='info'>
                 <p>7</p>
@@ -24,7 +33,7 @@ export function InfoBlocks (){
             </div>
 
             <div className='info'>
-                <p>{peopleInSpace.number}</p>
+                <p>{craftArr.length}</p>
                 <p>Tripulated crafts</p>
             </div>
         </div>

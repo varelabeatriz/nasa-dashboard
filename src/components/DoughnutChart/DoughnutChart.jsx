@@ -1,10 +1,30 @@
 import { Doughnut } from 'react-chartjs-2';
+import { usePeopleInSpace } from "../../contexts/PeopleInSpaceContext"; 
+import React, { useEffect } from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { DoughnutChartContainer } from './styles';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const data = {
-    labels: ['ISS', 'Shenzhou 13'],
+export function DoughnutChart (){
+
+  const { peopleInSpace, getData } = usePeopleInSpace();
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  let craftArr = [];
+
+  for(let i=0; i<peopleInSpace.number; i++){
+      craftArr.push(peopleInSpace.people[i].craft);
+
+      craftArr = craftArr.filter(function (value, index, array) { 
+          return array.indexOf(value) === index;
+      });
+  }
+
+  const chartData = {
+    labels: craftArr,
     datasets: [
       {
         label: '# of Votes',
@@ -22,11 +42,10 @@ const data = {
     ],
   };
 
-export function DoughnutChart (){
-    return (
-        <DoughnutChartContainer>
-            <h3>People in space by craft</h3>
-            <Doughnut data={data} />
-        </DoughnutChartContainer>
-    )
+  return (
+      <DoughnutChartContainer>
+          <h3>People in space by craft</h3>
+          <Doughnut data={chartData} />
+      </DoughnutChartContainer>
+  )
 }
