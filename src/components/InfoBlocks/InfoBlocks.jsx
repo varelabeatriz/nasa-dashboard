@@ -1,13 +1,26 @@
 import { usePeopleInSpace } from "../../contexts/PeopleInSpaceContext";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Axios from 'axios';
 
-export function InfoBlocks (){
+export function InfoBlocks (props){
 
+    const [asteroids, setAsteroids ] = useState();
     const { peopleInSpace, getData } = usePeopleInSpace();
 
+    let oi = props.asteroidsUrl;
+
     useEffect(() => {
+        const getAsteroidsData = async () => {
+            const result = await Axios.get(oi);
+            setAsteroids(result);
+            console.log(asteroids);
+        }
+
+        getAsteroidsData();
         getData();
     }, []);
+
+    
 
     let craftArr = [];
 
@@ -23,8 +36,8 @@ export function InfoBlocks (){
 
         <div className='info-container'>
             <div className='info'>
-                <p>7</p>
-                <p>Asteroids approaching Earth</p>
+                <p>?</p>
+                <p>???????????</p>
             </div>
 
             <div className='info'>
