@@ -13,7 +13,9 @@ export function DoughnutChart (){
     getData();
   }, []);
 
-  let craftArr = [];
+  let craftArr = [],
+  numbersArr = [],
+  percentageArr = [];
 
   for(let i=0; i<peopleInSpace.number; i++){
       craftArr.push(peopleInSpace.people[i].craft);
@@ -23,19 +25,39 @@ export function DoughnutChart (){
       });
   }
 
+  const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+
+  let currentCraft;
+ 
+    // get array with number of people by craft
+    for(let i=0; i<craftArr.length; i++){
+      currentCraft = countOccurrences(craftArr, craftArr[i]);
+      numbersArr.push(currentCraft);
+    }
+
+    // get array with percentage by craft
+    for(let i=0; i<numbersArr.length; i++){
+      currentCraft = (numbersArr[i] / craftArr.length) * 100;
+      percentageArr.push(currentCraft);
+    }
+
   const chartData = {
     labels: craftArr,
     datasets: [
       {
         label: '# of Votes',
-        data: [30, 70],
+        data: percentageArr,
         backgroundColor: [
           '#FF151F',
           '#4C8CED',
+          '#8c4ced',
+          '#4ced8f',
         ],
         borderColor: [
           '#FF151F',
           '#4C8CED',
+          '#8c4ced',
+          '#4ced8f',
         ],
         borderWidth: 1,
       },
