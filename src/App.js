@@ -5,19 +5,24 @@ import { About } from './components/About/About';
 import { ErrorPage } from './components/ErrorPage/ErrorPage';
 import PeopleInSpaceProvider from "./contexts/PeopleInSpaceContext";
 import { Header } from "./components/Header/Header";
+import { useState } from 'react';
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState(true);
+
+  const handleToggle = () => {
+      setDarkMode(!darkMode);
+    };
+
   return (
-    <div className="App">
+    <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       <PeopleInSpaceProvider>
-        <SideBar></SideBar>
+        <SideBar darkMode={darkMode}></SideBar>
         <div>
-          <div>
-            
-            <Header></Header>
-          </div>
+          <Header handleToggle={handleToggle}></Header>
           <Routes>
-            <Route path="/" element={<Feed />} />
+            <Route path="/" element={<Feed darkMode={darkMode} />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

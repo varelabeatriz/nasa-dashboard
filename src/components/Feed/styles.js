@@ -1,6 +1,50 @@
 import styled from 'styled-components';
 
 export const FeedContainer = styled.div`
+
+    &.dark-mode {
+        background-color: #4A4165;
+
+        h3 {
+            color: #ffffff;
+        }
+
+        div.row {
+            div.column {
+                div.info {
+                    background-color: #552EC3;
+                }
+
+                .table {
+                    background-color: #3D3652;
+                    color: #BBBBBB;
+
+                    div:nth-child(2n) {
+                        background-color: #4F456C;
+                    }
+                }
+            }
+
+            .chart-container {
+                background-color: #3D3652;
+            }
+        }
+
+        .astronomy-picture {
+            p {
+                color: #ffffff;
+            }
+
+            button {
+                background-color: #552EC3;
+            }
+        }
+    }
+
+    &.light-mode {
+        background-color: #EBEBEB;
+    }
+
     background-color: #EBEBEB;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
     margin: 10px;

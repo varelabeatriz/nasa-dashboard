@@ -65,7 +65,7 @@ export function DoughnutChart (){
   };
 
   return (
-      <DoughnutChartContainer>
+      <DoughnutChartContainer className='chart-container'>
           <h3>People in space by craft</h3>
           <Doughnut data={chartData} />
       </DoughnutChartContainer>

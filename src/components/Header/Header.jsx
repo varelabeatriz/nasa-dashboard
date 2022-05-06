@@ -1,6 +1,6 @@
 import { HeaderContainer } from './styles';
 
-export function Header (){
+export function Header (props){
     return (
         <HeaderContainer>
             <h1>
@@ -8,8 +8,8 @@ export function Header (){
               Dashboard
             </h1>
             <div className='switch-container'>
-                <label class="switch">
-                    <input type="checkbox"/>
+                <label className="switch" >
+                    <input type="checkbox" onClick={props.handleToggle}/>
                     <span class="slider round"></span>
                 </label>
             </div>

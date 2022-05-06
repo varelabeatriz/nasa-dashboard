@@ -25,7 +25,7 @@ export function Launches (){
             {launches ? (
 
                 launches.map(launches => (
-                <div>
+                <div key={launches.id}>
                     <p>{launches.name}</p> 
                     <p>{launches.vehicle.name}</p>
                     <p>{launches.pad.location.statename}</p>

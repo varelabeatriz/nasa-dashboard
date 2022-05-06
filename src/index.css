@@ -2,7 +2,6 @@
 
 body {
   overflow: hidden;
-
 }
 
 * {
@@ -16,6 +15,18 @@ img {
 
 .App {
   display: flex;
+}
+
+div.App.light-mode {
+  background-color: #f1f1f1;
+}
+
+div.App.dark-mode {
+  background-color: #3D3652;
+}
+
+div.App.dark-mode h1 {
+  color: #ffffff;
 }
 
 .App div h1 {

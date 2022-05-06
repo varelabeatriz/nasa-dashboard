@@ -6,6 +6,14 @@ export const HeaderContainer = styled.div`
     margin: 10px 10px 0 0;
     padding-right: 20px;
 
+    h1.dark-mode {
+        color: red;
+    }
+
+    h1.light-mode {
+        color: green;
+    }
+
     .switch-container{
         display: flex;
         justify-content: center;

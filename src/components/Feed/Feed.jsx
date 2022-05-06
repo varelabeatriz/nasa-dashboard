@@ -6,7 +6,7 @@ import { InfoBlocks } from '../InfoBlocks/InfoBlocks';
 import { Launches } from '../Launches/Launches';
 import { FeedContainer } from './styles';
 
-export function Feed (){
+export function Feed (props){
 
     const today = new Date(), 
     yyyy = today.getFullYear(),
@@ -24,7 +24,7 @@ export function Feed (){
     }
 
     return (
-        <FeedContainer>
+        <FeedContainer className={`${props.darkMode ? 'dark-mode' : 'light-mode'}`}>
             <h3>{month} {dd}, {yyyy}</h3>
             <div className='row'>
                 <div className='column'>
