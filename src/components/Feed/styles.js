@@ -11,9 +11,15 @@ export const FeedContainer = styled.div`
 
     div.row {
         display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        margin-top: 10px;
 
         div.column {
             width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
 
@@ -24,9 +30,8 @@ export const FeedContainer = styled.div`
     }
 
     div.info-container {
-        margin-top: 20px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: 30px;
 
         div.info {
@@ -35,7 +40,6 @@ export const FeedContainer = styled.div`
             align-items: center;
             background-color: #4C8CED;
             padding: 20px;
-            height: 80px;
             width: 30%;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
             border-radius: 14px;
@@ -51,7 +55,13 @@ export const FeedContainer = styled.div`
         }
     }
 
-    .launches-title {
-        margin-top: 20px;
+    @media(max-width: 768px) {
+        div.row {
+            flex-direction: column;
+
+            div.column {
+                width: 100%;
+            }
+        }
     }
 `

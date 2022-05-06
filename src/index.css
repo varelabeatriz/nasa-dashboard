@@ -30,3 +30,9 @@ img {
 .App div h1 img {
   width: 100px;
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+    overflow: visible;
+  }
+}

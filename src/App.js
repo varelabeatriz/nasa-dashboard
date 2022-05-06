@@ -4,6 +4,7 @@ import { SideBar } from "./components/SideBar/SideBar";
 import { About } from './components/About/About';
 import { ErrorPage } from './components/ErrorPage/ErrorPage';
 import PeopleInSpaceProvider from "./contexts/PeopleInSpaceContext";
+import { Header } from "./components/Header/Header";
 
 function App() {
   return (
@@ -11,10 +12,10 @@ function App() {
       <PeopleInSpaceProvider>
         <SideBar></SideBar>
         <div>
-          <h1>
-            <img src="nasa-logo.png" alt="" />
-            Dashboard
-          </h1>
+          <div>
+            
+            <Header></Header>
+          </div>
           <Routes>
             <Route path="/" element={<Feed />} />
             <Route path="/about" element={<About />} />

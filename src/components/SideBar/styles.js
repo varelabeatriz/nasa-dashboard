@@ -4,7 +4,7 @@ export const SideBarContainer = styled.div`
     margin: 10px;
     background-color: #4C8CED;
     width: 33%;
-    height: 81vh;
+    display: flex;
     padding: 120px 20px 20px;
     border-radius: 12px;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
@@ -38,5 +38,9 @@ export const SideBarContainer = styled.div`
                 margin-right: 10px;
             }
         }
+    }
+
+    @media(max-width: 768px) {
+        display: none;
     }
 `;

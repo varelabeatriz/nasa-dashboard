@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const LaunchesContainer = styled.div`
-    background-color: #d3d3d3;
-    margin: 20px 0;
-    border-radius: 12px;
 
     div.table {
         display: flex;
         flex-direction: column;
+        color: #696969;
+        background-color: #d3d3d3;
+        border-radius: 12px;
 
         > div {
             display: flex;
