@@ -6,10 +6,12 @@ import { ErrorPage } from './components/ErrorPage/ErrorPage';
 import PeopleInSpaceProvider from "./contexts/PeopleInSpaceContext";
 import { Header } from "./components/Header/Header";
 import { useState } from 'react';
+import { Images } from "./components/Images/Images";
+import { PeopleInSpace } from "./components/PeopleInSpace/PeopleInSpace";
 
 function App() {
 
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleToggle = () => {
       setDarkMode(!darkMode);
@@ -24,6 +26,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Feed darkMode={darkMode} />} />
             <Route path="/about" element={<About />} />
+            <Route path="/images" element={<Images />} />
+            <Route path="/people-in-space" element={<PeopleInSpace />} />
+            <Route path="/github" element={<About />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
