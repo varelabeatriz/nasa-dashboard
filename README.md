@@ -3,11 +3,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### 🪐 About
-See the astronomy image of the day, by NASA, and check the previous images.
+See the astronomy image of the day, by NASA, and check the previous images. You can also see how many people are in space right now, and in which craft, and check the next 5 launches from earth. If you have sensible eyes, the dark mode is already available. 
 
 ### 🎲 API
 
-This project uses the [NASA APOD API](https://github.com/nasa/apod-api). 
+This project uses the [NASA APOD API](https://github.com/nasa/apod-api), [Rocket Launch API](https://www.rocketlaunch.live/api) and [People in Space API](http://open-notify.org/Open-Notify-API/People-In-Space/). 
 
 ### ✨ Run this App
 
@@ -32,4 +32,3 @@ $ yarn start
 
 - Make it responsive
 - Add translations
-- Add dark mode
