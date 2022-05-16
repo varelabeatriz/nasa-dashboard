@@ -10,7 +10,7 @@ export function Header (props){
             <div className='switch-container'>
                 <label className="switch" >
                     <input type="checkbox" onClick={props.handleToggle}/>
-                    <span class="slider round"></span>
+                    <span className="slider round"></span>
                 </label>
             </div>
         </HeaderContainer>
