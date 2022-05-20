@@ -1,4 +1,5 @@
 import { usePeopleInSpace } from "../../contexts/PeopleInSpaceContext"; 
+import { PeopleInSpaceContainer } from './styles';
 import React, { useEffect } from 'react';
 
 export function PeopleInSpace (){
@@ -10,14 +11,15 @@ export function PeopleInSpace (){
       }, []);
 
     return (
-        <div>
+        <PeopleInSpaceContainer>
             <h1>People in space page</h1>
 
             {peopleInSpace ? (
 
                 peopleInSpace.people.map(peopleInSpace => (
                 <div key={peopleInSpace.name}>
-                    <p>{peopleInSpace.name}</p> 
+                    <h4>Name: {peopleInSpace.name}</h4> 
+                    <p>Craft: {peopleInSpace.craft}</p>
                 </div>
                 ))
 
@@ -27,6 +29,6 @@ export function PeopleInSpace (){
                 </div>
             )}
 
-        </div>
+        </PeopleInSpaceContainer>
     )
 }
