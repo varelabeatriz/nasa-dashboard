@@ -2,20 +2,25 @@ import styled from 'styled-components';
 
 export const LaunchesContainer = styled.div`
 
-    div.table {
-        display: flex;
-        flex-direction: column;
+    h3{
+        margin-bottom: 10px;
+    }
+
+    .table {
         color: #696969;
         background-color: #d3d3d3;
         border-radius: 12px;
 
-        > div {
-            display: flex;
-            justify-content: space-between;
+        > tr {
             padding: 15px;
 
             &:nth-child(2n) {
                 background-color: #e3e3e3;
+            }
+
+            td {
+                padding: 12px 30px;
+                text-align: left;
             }
         }
     }

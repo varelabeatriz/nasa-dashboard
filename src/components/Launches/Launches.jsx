@@ -20,18 +20,18 @@ export function Launches (){
     return (
         <LaunchesContainer>
             <h3 className='launches-title'>Next 5 launches</h3>
-            <div className='table'>
+            <table className='table'>
 
             {launches ? (
 
                 launches.map(launches => (
-                <div key={launches.id}>
-                    <p>{launches.name}</p> 
-                    <p>{launches.vehicle.name}</p>
-                    <p>{launches.pad.location.statename}</p>
-                    <p>{launches.pad.location.country}</p>
-                    <p>{launches.date_str}</p>
-                </div>
+                <tr key={launches.id}>
+                    <td>{launches.name}</td> 
+                    <td>{launches.vehicle.name}</td>
+                    <td>{launches.pad.location.statename}</td>
+                    <td>{launches.pad.location.country}</td>
+                    <td>{launches.date_str}</td>
+                </tr>
            ))
 
             ) : (
@@ -39,7 +39,7 @@ export function Launches (){
                     
                 </div>
             )}
-            </div>
+            </table>
         </LaunchesContainer>
     )
 }
