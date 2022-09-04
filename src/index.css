@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-body {
-  overflow: hidden;
-}
-
 * {
   margin: 0;
   font-family: sans-serif;
@@ -13,10 +9,12 @@ img {
   width: 500px;
 }
 
+.appContainer {
+  
+}
+
 .App {
   display: flex;
-  width: 100vw;
-  min-height: 100vh;
 }
 
 div.App.light-mode {

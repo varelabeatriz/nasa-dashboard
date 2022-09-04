@@ -4,8 +4,6 @@ export const ApodPictureContainer = styled.div `
     padding-top: 20px;
 
     img {
-        width: 400px;
-        height: 260px;
         margin-right: 15px;
         border-radius: 8px;
     }

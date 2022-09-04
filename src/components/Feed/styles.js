@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const FeedContainer = styled.div`
-
     &.dark-mode {
         background-color: #4A4165;
 
@@ -50,8 +49,6 @@ export const FeedContainer = styled.div`
     margin: 10px;
     border-radius: 12px;
     padding: 20px;
-    width: 95%;
-    height: 82vh;
 
     div.row {
         display: flex;

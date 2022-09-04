@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 10px 10px 0 0;
-    padding-right: 20px;
 
     h1.dark-mode {
         color: red;
@@ -18,6 +16,7 @@ export const HeaderContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-right: 20px;
     }
 
     /* The switch - the box around the slider */

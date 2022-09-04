@@ -8,6 +8,7 @@ import { Header } from "./components/Header/Header";
 import { useState } from 'react';
 import { Images } from "./components/Images/Images";
 import { PeopleInSpace } from "./components/PeopleInSpace/PeopleInSpace";
+import { SolarSystem } from "./components/SolarSystem/SolarSystem";
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       <PeopleInSpaceProvider>
         <SideBar darkMode={darkMode}></SideBar>
-        <div>
+        <div className="appContainer">
           <Header handleToggle={handleToggle}></Header>
           <Routes>
             <Route path="/" element={<Feed darkMode={darkMode} />} />
@@ -29,6 +30,7 @@ function App() {
             <Route path="/images" element={<Images />} />
             <Route path="/people-in-space" element={<PeopleInSpace />} />
             <Route path="/github" element={<About />} />
+            <Route path="/solar-system" element={<SolarSystem />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>

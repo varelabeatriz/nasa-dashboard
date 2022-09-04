@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const LaunchesContainer = styled.div`
 
     h3{
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
 
     .table {
+        width: 100%;
         color: #696969;
         background-color: #d3d3d3;
         border-radius: 12px;
@@ -19,7 +20,7 @@ export const LaunchesContainer = styled.div`
             }
 
             td {
-                padding: 12px 30px;
+                padding: 12px;
                 text-align: left;
             }
         }

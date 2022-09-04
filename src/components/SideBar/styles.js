@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const SideBarContainer = styled.div`
-
     &.dark-mode {
         background-color: #552EC3;
     }
@@ -11,7 +10,6 @@ export const SideBarContainer = styled.div`
     }
 
     margin: 10px;
-    width: 33%;
     display: flex;
     padding: 120px 20px 20px;
     border-radius: 12px;

@@ -40,6 +40,13 @@ export function SideBar(props){
                     }}>
                     <img src='github.svg' alt='github icon'></img>
                     Github</button>
+                <button
+                    onClick={()=> {
+                        navigate("/solar-system");
+                    }}>
+                    <img src='github.svg' alt='github icon'></img>
+                    Sistema Solar
+                </button>
             </nav>
         </SideBarContainer>
     )
