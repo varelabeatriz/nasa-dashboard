@@ -11,7 +11,7 @@ export const DoughnutChartContainer = styled.div`
         margin-bottom: 20px;
     }
 
-    @media(max-width: 768px) {
-       
+    @media(max-width: 768px){
+        display: none;
     }
 `

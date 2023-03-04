@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const SideBarContainer = styled.div`
+    width: 10%;
+
     &.dark-mode {
         background-color: #552EC3;
     }

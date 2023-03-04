@@ -5,16 +5,17 @@
   font-family: sans-serif;
 }
 
-img {
+.astronomy-picture img {
   width: 500px;
-}
-
-.appContainer {
-  
+  height: fit-content;
 }
 
 .App {
   display: flex;
+}
+
+.App .appContainer {
+  width: 90%;
 }
 
 div.App.light-mode {
@@ -45,5 +46,10 @@ div.App.dark-mode h1 {
 @media only screen and (max-width: 768px) {
   body {
     overflow: visible;
+  }
+
+  .astronomy-picture img {
+    width: 50%;
+    height: fit-content;
   }
 }

@@ -71,6 +71,7 @@ export const FeedContainer = styled.div`
     }
 
     div.info-container {
+        height: 30%;
         display: flex;
         justify-content: space-between;
         gap: 30px;
@@ -79,6 +80,7 @@ export const FeedContainer = styled.div`
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             background-color: #4C8CED;
             padding: 20px;
             width: 30%;

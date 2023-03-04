@@ -12,7 +12,7 @@ export const ApodPictureContainer = styled.div `
         display: flex;
 
         > div {
-            padding: 20px;
+            padding: 0 20px 20px;
 
             small {
                 color: #929292;
