@@ -4,25 +4,28 @@ export const LaunchesContainer = styled.div`
 
     height: 70%;
 
-    h3{
-        margin: 10px 0;
+    .launches-title-container {
+        height: 12%;
+        display: flex;
+        align-items: flex-end;
+
+        h3 {
+            line-height: 2;
+       }
     }
 
     .table {
-        height: 90%;
+        height: 88%;
         width: 100%;
         color: #696969;
         background-color: #d3d3d3;
-        border-radius: 12px;
+        border-radius: 6px;
 
         > tr {
             padding: 15px;
+            border-style: solid;
 
-            &:nth-child(2n) {
-                background-color: #e3e3e3;
-            }
-
-            td {
+            td, th {
                 padding: 12px;
                 text-align: left;
             }

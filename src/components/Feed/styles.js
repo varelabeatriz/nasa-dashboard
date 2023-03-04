@@ -85,7 +85,7 @@ export const FeedContainer = styled.div`
             padding: 20px;
             width: 30%;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
-            border-radius: 14px;
+            border-radius: 6px;
             color: white;
 
             p {

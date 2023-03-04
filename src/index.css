@@ -48,6 +48,10 @@ div.App.dark-mode h1 {
     overflow: visible;
   }
 
+  .App .appContainer {
+    width: 100%;
+  }
+
   .astronomy-picture img {
     width: 50%;
     height: fit-content;

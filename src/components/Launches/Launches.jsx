@@ -19,8 +19,17 @@ export function Launches (){
 
     return (
         <LaunchesContainer>
-            <h3 className='launches-title'>Next 5 launches</h3>
+            <div className='launches-title-container'>
+                <h3 className='launches-title'>Next 5 launches</h3>
+            </div>
             <table className='table'>
+                <tr>
+                    <th>Mission</th>
+                    <th>Craft name</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Date</th>
+                </tr>
 
             {launches ? (
 
