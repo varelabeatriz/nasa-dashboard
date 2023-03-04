@@ -1,32 +1,39 @@
 import Axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useQuery } from "react-query";
 import { ApodPictureContainer } from './styles';
+import { useNavigate } from 'react-router-dom';
 
 export function ApodPicture(){
+    let navigate = useNavigate();
 
-    const [image, setImage ] = useState([]);
+    const { data, isLoading, error } = useQuery("images-home", () =>  
+        Axios.get("https://api.nasa.gov/planetary/apod?api_key=n8y6D1t17guEP26zaoJpQRuIbkihNKIgFf1S3baD").then((response) => response.data)
+    );
 
-    const url = `https://api.nasa.gov/planetary/apod?api_key=n8y6D1t17guEP26zaoJpQRuIbkihNKIgFf1S3baD`;
-
-    const getData = async () => {
-        const result = await Axios.get(url);
-        setImage(result.data);
+    if(isLoading) {
+        return "Loading...";
     }
 
-    useEffect(() => {
-        getData();
-    }, []);
+    if(error) {
+        return "Error!";
+    }
 
     return (
         <ApodPictureContainer>
-            {image ? (
+            {data ? (
                 <div className='astronomy-picture'>
-                    <img src={image.hdurl} alt="" />
+                    <img src={data.hdurl} alt="" />
                     <div>
-                        <h3>{image.title}</h3>
+                        <h3>{data.title}</h3>
                         <small>Astronomy Picture of the Day</small>
-                        <p>{image.explanation}</p>
-                        <button>See previous pictures</button>
+                        <p>{data.explanation}</p>
+                        <button  
+                            onClick={()=> {
+                                navigate("/images");
+                             }}>
+                            Read more
+                        </button>
                     </div>
                 </div>
             ) : (

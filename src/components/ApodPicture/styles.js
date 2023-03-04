@@ -21,8 +21,10 @@ export const ApodPictureContainer = styled.div `
             p {
                 margin-top: 20px;
                 font-family: 'Inter', sans-serif;
-                font-size: 14px;
+                font-size: 18px;
                 color: #3d3d3d;
+                height: 210px;
+                overflow: hidden;
             }
 
             button {
