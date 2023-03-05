@@ -43,7 +43,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Feed darkMode={darkMode} yyyy={yyyy} month={month} dd={dd} />} />
             <Route path="/about" element={<About />} />
-            <Route path="/images" element={<Images yyyy={yyyy} month={month} dd={dd} />} />
+            <Route path="/images" element={<Images yyyy={yyyy} month={month} dd={dd} mm={mm}/>} />
             <Route path="/people-in-space" element={<PeopleInSpace />} />
             <Route path="/github" element={<About />} />
             <Route path="/solar-system" element={<SolarSystem />} />

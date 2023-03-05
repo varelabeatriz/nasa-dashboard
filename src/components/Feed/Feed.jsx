@@ -1,5 +1,4 @@
-import Axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ApodPicture } from '../ApodPicture/ApodPicture';
 import { DoughnutChart } from '../DoughnutChart/DoughnutChart';
 import { InfoBlocks } from '../InfoBlocks/InfoBlocks';
