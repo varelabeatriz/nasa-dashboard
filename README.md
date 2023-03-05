@@ -27,6 +27,7 @@ $ yarn start
 - [Rocket Launch API](https://www.rocketlaunch.live/api)
 - [People in Space API](http://open-notify.org/Open-Notify-API/People-In-Space/)
 - [Styled Components](https://styled-components.com/)
+- Testando algumas requisições com [React Query](https://react-query-v3.tanstack.com/)
 
 ### 🚀 Points to improve
 
