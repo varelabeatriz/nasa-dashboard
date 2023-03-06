@@ -1,9 +1,17 @@
 import styled from 'styled-components';
+import { rgba } from 'polished'
 
 export const ImagesContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .image-container {
         display: flex;
-        width: 500px;
+        justify-content: center;
+        width: 50%;
+        padding: 20px;
 
         .prev-image {
             img {
@@ -16,7 +24,12 @@ export const ImagesContainer = styled.div`
             align-items: center;
 
             button {
+                background-color: transparent;
                 border: 0;
+
+                &:disabled { 
+                    display: none;
+                }
 
                 img {
                     height: 20px;
@@ -26,7 +39,7 @@ export const ImagesContainer = styled.div`
         }
 
         img {
-            width: 200px;
+            width: 100%;
         }
     }
 `

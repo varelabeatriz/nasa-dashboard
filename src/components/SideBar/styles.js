@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const SideBarContainer = styled.div`
+    min-height: 85vh;
     width: 10%;
 
     &.dark-mode {

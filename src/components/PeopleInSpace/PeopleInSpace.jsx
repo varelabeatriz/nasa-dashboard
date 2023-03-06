@@ -12,7 +12,22 @@ export function PeopleInSpace (){
 
     return (
         <PeopleInSpaceContainer>
-            <h1>People in space page</h1>
+            <h1>People in Space</h1>
+
+            <div className="astronaut-container">
+            {peopleInSpace ? (
+
+                peopleInSpace.people.map(peopleInSpace => (
+                    <div key={peopleInSpace.name}>
+                        <img src='astronaut.svg' alt='astronaut' className="astronaut"></img>
+                        <span><p>{peopleInSpace.name}</p></span>
+                    </div>
+                ))
+
+            ) : (
+                <div></div>
+            )}
+            </div>
 
             {peopleInSpace ? (
 
