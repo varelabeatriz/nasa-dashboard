@@ -31,5 +31,7 @@ $ yarn start
 
 ### 🚀 Points to improve
 
-- Make it responsive
 - Add translations
+- Hide API keys
+- Improve dark mode colors
+- Finish solar system animation
