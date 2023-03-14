@@ -34,6 +34,11 @@ export const ApodPictureContainer = styled.div `
                 border-radius: 10px;
                 padding: 10px 12px;
                 margin-top: 20px;
+
+                &:hover {
+                    background-color: #4584E3;
+                    cursor: pointer;
+                }
             }
         }
     }

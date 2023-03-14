@@ -26,6 +26,7 @@ export const ImagesContainer = styled.div`
             button {
                 background-color: transparent;
                 border: 0;
+                cursor: pointer;
 
                 &:disabled { 
                     display: none;
