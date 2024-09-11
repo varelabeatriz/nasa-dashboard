@@ -20,15 +20,6 @@ export const LaunchesContainer = styled.div`
         color: #696969;
         background-color: #d3d3d3;
         border-radius: 6px;
-
-        > tr {
-            padding: 15px;
-            border-style: solid;
-
-            td, th {
-                padding: 12px;
-                text-align: left;
-            }
-        }
+        text-align: left;
     }
 `

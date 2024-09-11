@@ -36,11 +36,6 @@ export function InfoBlocks (props){
 
         <div className='info-container'>
             <div className='info'>
-                <p>?</p>
-                <p>???????????</p>
-            </div>
-
-            <div className='info'>
                 <p>{peopleInSpace.number}</p>
                 <p>People in Space</p>
             </div>

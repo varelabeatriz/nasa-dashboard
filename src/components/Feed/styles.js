@@ -83,7 +83,7 @@ export const FeedContainer = styled.div`
             justify-content: center;
             background-color: #4C8CED;
             padding: 20px;
-            width: 30%;
+            width: 50%;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
             border-radius: 6px;
             color: white;

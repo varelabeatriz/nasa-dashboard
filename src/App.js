@@ -8,7 +8,6 @@ import { Header } from "./components/Header/Header";
 import { useState } from 'react';
 import { Images } from "./components/Images/Images";
 import { PeopleInSpace } from "./components/PeopleInSpace/PeopleInSpace";
-import { SolarSystem } from "./components/SolarSystem/SolarSystem";
 import { useQuery, useQueryClient } from "react-query";
 import Axios from 'axios';
 
@@ -46,7 +45,6 @@ function App() {
             <Route path="/images" element={<Images />} />
             <Route path="/people-in-space" element={<PeopleInSpace />} />
             <Route path="/github" element={<About />} />
-            <Route path="/solar-system" element={<SolarSystem />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
