@@ -34,4 +34,5 @@ $ yarn start
 - Add translations
 - Hide API keys
 - Improve dark mode colors
-- Finish solar system animation
+- Make it responsive
+- Improve styles
